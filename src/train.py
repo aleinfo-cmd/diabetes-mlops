@@ -1,5 +1,5 @@
 import json
-
+import joblib
 import mlflow
 import mlflow.sklearn
 import pandas as pd
@@ -35,6 +35,7 @@ with mlflow.start_run():
         ]
     )
     model.fit(X_train, y_train)
+    joblib.dump(model, "models/model.joblib")
 
     pred = model.predict(X_test)
     proba = model.predict_proba(X_test)[:, 1]
