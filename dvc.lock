@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw/diabetes.csv
+      hash: md5
+      md5: f2906818eda8fcfc8f8416557ab1e6df
+      size: 23873
+    - path: src/preprocess.py
+      hash: md5
+      md5: ad135051214de065c6ecd6b87f9f7baf
+      size: 680
+    params:
+      params.yaml:
+        preprocess:
+          test_size: 0.2
+          random_state: 42
+          zero_as_missing:
+          - Glucose
+          - BloodPressure
+          - SkinThickness
+          - Insulin
+          - BMI
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: 7832c5d92801caebbb32f9dcc026a590.dir
+      size: 28345
+      nfiles: 2
