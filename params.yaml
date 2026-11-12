@@ -7,3 +7,7 @@ preprocess:
     - SkinThickness
     - Insulin
     - BMI
+train:
+  n_estimators: 200
+  max_depth: 5
+  class_weight: balanced
