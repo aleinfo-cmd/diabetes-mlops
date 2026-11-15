@@ -1,3 +1,4 @@
+import os
 import json
 import joblib
 import mlflow
@@ -24,7 +25,7 @@ y_train = train["Outcome"]
 X_test = test.drop(columns="Outcome").astype("float64")
 y_test = test["Outcome"]
 
-mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db"))
 mlflow.set_experiment("diabetes-prediccion")
 
 with mlflow.start_run():

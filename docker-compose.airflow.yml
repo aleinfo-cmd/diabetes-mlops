@@ -1,0 +1,14 @@
+services:
+  airflow:
+    build:
+      context: ./airflow
+    container_name: airflow-diabetes
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      MLFLOW_TRACKING_URI: sqlite:////opt/airflow/mlflow_airflow.db
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - .:/opt/airflow/proyecto
+    command: standalone
