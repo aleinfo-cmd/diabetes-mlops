@@ -1,0 +1,4 @@
+regla,base,con_drift,estado_base,estado_drift
+Recall >= 0.7,0.778,0.981,OK,OK
+Precision >= 0.5,0.618,0.405,OK,ALERTA
+Cambio en positivos predichos <= 0.15,0.0,0.409,OK,ALERTA
