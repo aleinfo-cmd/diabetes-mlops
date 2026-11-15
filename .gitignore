@@ -222,3 +222,5 @@ mlflow.db
 mlruns/
 mlartifacts/
 metrics.json
+monitoring/produccion_*.csv
+monitoring/reporte_*.json
