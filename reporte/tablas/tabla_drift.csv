@@ -1,0 +1,9 @@
+variable,ks_normal,p_normal,ks_drift,p_drift,drift_detectado
+Pregnancies,0.033,0.9983,0.033,0.9983,False
+Glucose,0.041,0.9786,0.479,0.0,True
+BloodPressure,0.053,0.8894,0.053,0.8894,False
+SkinThickness,0.04,0.9986,0.04,0.9986,False
+Insulin,0.157,0.1027,0.157,0.1027,False
+BMI,0.06,0.7531,0.347,0.0,True
+DiabetesPedigreeFunction,0.078,0.4164,0.078,0.4164,False
+Age,0.045,0.9486,0.588,0.0,True
